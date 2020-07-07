@@ -12,7 +12,23 @@ void Model::removeObserver(Observer* o) {
     observers.remove(o);
 }
 
-void Model::notify() {
+void Model::notify(int x,int y,float value) {
     for (Observer* observer : observers)
-        observer->update();
+        observer->update(x,y,value);
+}
+
+int Model::getWidth() const {
+    return width;
+}
+
+void Model::setWidth(int width) {
+    Model::width = width;
+}
+
+int Model::getHeight() const {
+    return height;
+}
+
+void Model::setHeight(int height) {
+    Model::height = height;
 }

@@ -11,7 +11,7 @@ class Subject {  // Abstract Subject
 public:
     virtual void addObserver(Observer* o) = 0;
     virtual void removeObserver(Observer* o) = 0;
-    virtual void notify() = 0;
+    virtual void notify(int x,int y,float value) = 0;
     virtual ~Subject() {}
 };
 

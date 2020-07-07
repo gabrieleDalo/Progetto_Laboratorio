@@ -7,7 +7,7 @@
 
 class Observer {  // Abstract Observer
 public:
-    virtual	void update() = 0;
+    virtual	void update(int x,int y,float value) = 0;
     virtual ~Observer() {}
 };
 

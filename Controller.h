@@ -9,7 +9,13 @@
 
 class Controller {
 public:
-    Controller(Model* m) : model(m) {}
+    explicit Controller(Model* m) : model(m) {}
+
+    bool checkOperation(int x,int y,string data);
+
+    float checkString(string data);
+
+    float checkFormula(string data);
 private:
     Model* model;
 };

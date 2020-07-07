@@ -19,7 +19,9 @@ public:
 wxIMPLEMENT_APP(MyApp);
 
 bool MyApp::OnInit() {
-    Model* model = new Model;
+    int numRows = 100;
+    int numCols = 52;
+    Model* model = new Model(numRows,numCols);
     Controller* controller = new Controller(model);
     View *frame = new View(model, controller, NULL, wxID_ANY, "Foglio di calcolo" );
     frame->Show( true );
