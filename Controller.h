@@ -11,11 +11,21 @@ class Controller {
 public:
     explicit Controller(Model* m) : model(m) {}
 
-    bool checkOperation(int x,int y,string data);
+    void checkOperation(int x,int y,string data);
 
     float checkString(string data);
 
     float checkFormula(string data);
+
+    float calculateSum(vector<float> values);
+
+    float calculateMax(vector<float> values);
+
+    float calculateMin(vector<float> values);
+
+    float calculateMean(vector<float> values);
+
+
 private:
     Model* model;
 };
