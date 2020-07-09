@@ -11,7 +11,7 @@
 #include <numeric>
 #include "Controller.h"
 
-void Controller::checkOperation(int x,int y,string data) {
+void Controller::checkOperation(int x,int y,string row,string column,string data) {
     float value;
 
     if(data.at(0)=='='){
@@ -24,8 +24,10 @@ void Controller::checkOperation(int x,int y,string data) {
         value = checkString(data);
     }
 
+    model->setRow(x,y,row);
+    model->setColumn(x,y,column);
     model->setValue(x,y,value);
-    cout << "X:" << x << " Y:" << y << " Value:" << value << endl;
+    cout << "X:" << x << " Y:" << y << " Row:" << model->getRow(x,y) << " Column:" << model->getColumn(x,y) << " Value:" << model->getValue(x,y) << endl;
 }
 
 float Controller::checkString(string data){
@@ -52,20 +54,25 @@ float Controller::checkFormula(string data) {
     float value;
     vector<float> v;
 
-    v.push_back(5);
-    v.push_back(7.777);
-
     if(data.compare(0,somma.length(),somma)==0) {
         cout << "Somma" << endl;
+        data = data.substr(somma.size());
+        v = getRange(data);
         value = calculateSum(v);
     }else if(data.compare(0,max.length(),max)==0) {
         cout << "Max" << endl;
+        data = data.substr(max.size());
+        v = getRange(data);
         value = calculateMax(v);
     }else if(data.compare(0,min.length(),min)==0) {
         cout << "Min" << endl;
+        data = data.substr(min.size());
+        v = getRange(data);
         value = calculateMin(v);
     }else if(data.compare(0,mean.length(),mean)==0) {
         cout << "Mean" << endl;
+        data = data.substr(mean.size());
+        v = getRange(data);
         value = calculateMean(v);
     }else{
         cout << "Altro" << endl;
@@ -88,6 +95,21 @@ float Controller::calculateMin(const vector<float> values) {
 
 float Controller::calculateMean(const vector<float> values) {
     return (std::accumulate(values.begin(),values.end(),0.0))/values.size();
+}
+
+vector<float> Controller::getRange(string data) {
+    vector<float> values;
+    if(data.find(')') != string::npos && data.at(0) != ')') {
+        data = data.substr(0, data.find(')', 0));
+
+        values.push_back(5);
+        values.push_back(7);
+
+    }else{
+        values.push_back(0);
+    }
+
+    return values;
 }
 
 

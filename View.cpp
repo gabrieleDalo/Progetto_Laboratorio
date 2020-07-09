@@ -40,7 +40,7 @@ View::~View() {
 }
 
 void View::onChangeCell(wxCommandEvent &event){
-    controller->checkOperation(grid->GetCursorRow(),grid->GetCursorColumn(),string(grid->GetCellValue(grid->GetCursorRow(),grid->GetCursorColumn()).mb_str(wxConvUTF8)));
+    controller->checkOperation(grid->GetCursorRow(),grid->GetCursorColumn(),string(grid->GetRowLabelValue(grid->GetCursorRow()).mb_str(wxConvUTF8)),string(grid->GetColLabelValue(grid->GetCursorColumn()).mb_str(wxConvUTF8)),string(grid->GetCellValue(grid->GetCursorRow(),grid->GetCursorColumn()).mb_str(wxConvUTF8)));
 }
 
 void View::update(int x,int y,float value) {

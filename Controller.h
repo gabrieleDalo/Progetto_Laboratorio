@@ -11,7 +11,7 @@ class Controller {
 public:
     explicit Controller(Model* m) : model(m) {}
 
-    void checkOperation(int x,int y,string data);
+    void checkOperation(int x,int y,string row,string column,string data);
 
     float checkString(string data);
 
@@ -25,7 +25,7 @@ public:
 
     float calculateMean(vector<float> values);
 
-
+    vector<float> getRange(string data);
 private:
     Model* model;
 };

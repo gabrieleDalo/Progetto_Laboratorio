@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/Users/gabrieledalo/Desktop/Progetto_Laboratorio/Cell.h
+string
+-
+
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio/Controller.cpp
 string
 -
@@ -35,6 +39,8 @@ list
 -
 Subject.h
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio/Subject.h
+Cell.h
+/Users/gabrieledalo/Desktop/Progetto_Laboratorio/Cell.h
 
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio/Observer.h
 

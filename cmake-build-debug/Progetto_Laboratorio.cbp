@@ -94,6 +94,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio/Cell.cpp">
+			<Option target="Progetto_Laboratorio"/>
+		</Unit>
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio/Cell.h">
+			<Option target="Progetto_Laboratorio"/>
+		</Unit>
 		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio/Controller.cpp">
 			<Option target="Progetto_Laboratorio"/>
 		</Unit>
