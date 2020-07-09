@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/gabrieledalo/Desktop/Progetto_Laboratorio/Cell.cpp" "/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/CMakeFiles/Progetto_Laboratorio.dir/Cell.cpp.o"
   "/Users/gabrieledalo/Desktop/Progetto_Laboratorio/Controller.cpp" "/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/CMakeFiles/Progetto_Laboratorio.dir/Controller.cpp.o"
   "/Users/gabrieledalo/Desktop/Progetto_Laboratorio/Model.cpp" "/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/CMakeFiles/Progetto_Laboratorio.dir/Model.cpp.o"
   "/Users/gabrieledalo/Desktop/Progetto_Laboratorio/View.cpp" "/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/CMakeFiles/Progetto_Laboratorio.dir/View.cpp.o"

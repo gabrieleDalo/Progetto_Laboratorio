@@ -74,12 +74,12 @@ clean: CMakeFiles/Progetto_Laboratorio.dir/clean
 CMakeFiles/Progetto_Laboratorio.dir/all:
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/depend
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target Progetto_Laboratorio"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target Progetto_Laboratorio"
 .PHONY : CMakeFiles/Progetto_Laboratorio.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Progetto_Laboratorio.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Progetto_Laboratorio.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/Progetto_Laboratorio.dir/rule

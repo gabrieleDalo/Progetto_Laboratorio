@@ -24,10 +24,9 @@ void Controller::checkOperation(int x,int y,string row,string column,string data
         value = checkString(data);
     }
 
-    model->setRow(x,y,row);
-    model->setColumn(x,y,column);
-    model->setValue(x,y,value);
-    cout << "X:" << x << " Y:" << y << " Row:" << model->getRow(x,y) << " Column:" << model->getColumn(x,y) << " Value:" << model->getValue(x,y) << endl;
+    model->setValue(x,y,row,column,value);
+
+    cout << " Row:" << row << " Column:" << column << " Value:" << model->getValue(row,column) << endl;
 }
 
 float Controller::checkString(string data){
