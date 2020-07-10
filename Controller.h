@@ -17,6 +17,8 @@ public:
 
     float checkFormula(string data);
 
+    int convertLabelValue(string value);
+
     float calculateSum(vector<float> values);
 
     float calculateMax(vector<float> values);

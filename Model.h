@@ -22,11 +22,11 @@ public:
 
     void notify(int x,int y,float value) override;
 
-    float getValue(string x,string y) const {
+    float getValue(int x,int y) const {
         return values.find(make_pair(x,y))->second;
     }
 
-    void setValue(int x,int y,string row,string column,float value) {
+    void setValue(int x,int y,int row,int column,float value) {
         values[make_pair(row,column)] = value;
         notify(x,y,value);
     }
@@ -42,7 +42,7 @@ public:
 
 private:
     int width,height;
-    map<pair<string,string>,float> values;
+    map<pair<int,int>,float> values;
     list<Observer*> observers;
 };
 

@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug"/>
+				<Option working_dir="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug"/>
+				<Option working_dir="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug"/>
+				<Option working_dir="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Progetto_Laboratorio">
-				<Option output="/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Progetto_Laboratorio" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug"/>
+				<Option output="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Progetto_Laboratorio" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -59,15 +59,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 Progetto_Laboratorio"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Makefile&quot;  VERBOSE=1 Progetto_Laboratorio"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Progetto_Laboratorio/fast">
-				<Option output="/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Progetto_Laboratorio" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug"/>
+				<Option output="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Progetto_Laboratorio" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -87,41 +87,41 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 Progetto_Laboratorio/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Makefile&quot;  VERBOSE=1 Progetto_Laboratorio/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio/Controller.cpp">
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Controller.cpp">
 			<Option target="Progetto_Laboratorio"/>
 		</Unit>
-		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio/Controller.h">
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Controller.h">
 			<Option target="Progetto_Laboratorio"/>
 		</Unit>
-		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio/Model.cpp">
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Model.cpp">
 			<Option target="Progetto_Laboratorio"/>
 		</Unit>
-		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio/Model.h">
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Model.h">
 			<Option target="Progetto_Laboratorio"/>
 		</Unit>
-		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio/Observer.h">
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Observer.h">
 			<Option target="Progetto_Laboratorio"/>
 		</Unit>
-		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio/Subject.h">
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Subject.h">
 			<Option target="Progetto_Laboratorio"/>
 		</Unit>
-		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio/View.cpp">
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/View.cpp">
 			<Option target="Progetto_Laboratorio"/>
 		</Unit>
-		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio/View.h">
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/View.h">
 			<Option target="Progetto_Laboratorio"/>
 		</Unit>
-		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio/main.cpp">
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/main.cpp">
 			<Option target="Progetto_Laboratorio"/>
 		</Unit>
-		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio/CMakeLists.txt">
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

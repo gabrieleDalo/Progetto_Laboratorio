@@ -24,9 +24,9 @@ void Controller::checkOperation(int x,int y,string row,string column,string data
         value = checkString(data);
     }
 
-    model->setValue(x,y,row,column,value);
+    model->setValue(x,y,convertLabelValue(row),convertLabelValue(column),value);
 
-    cout << " Row:" << row << " Column:" << column << " Value:" << model->getValue(row,column) << endl;
+    cout << "X: " << x << " Y: " << y << " Row:" << row << " Column:" << column << " Value:" << model->getValue(convertLabelValue(row),convertLabelValue(column)) << endl;
 }
 
 float Controller::checkString(string data){
@@ -80,6 +80,26 @@ float Controller::checkFormula(string data) {
     return value;
 }
 
+int Controller::convertLabelValue(string value){
+    int convertedValue = 0;
+    string newValue;
+
+    try{
+        convertedValue = stoi(value);
+        convertedValue --;
+    }catch (invalid_argument &exception){
+        transform(value.begin(),value.end(),value.begin(),::toupper);
+
+        for(const auto& itr : value){
+            convertedValue *=26;
+            convertedValue += itr - 'A' + 1;
+        }
+
+    }
+
+    return convertedValue;
+}
+
 float Controller::calculateSum(const vector<float> values) {
     return accumulate(values.begin(),values.end(),0.0);
 }
@@ -98,11 +118,36 @@ float Controller::calculateMean(const vector<float> values) {
 
 vector<float> Controller::getRange(string data) {
     vector<float> values;
+    int firstRow,lastRow;
+    int firstColumn,lastColumn;
+    int row,column;
+
     if(data.find(')') != string::npos && data.at(0) != ')') {
         data = data.substr(0, data.find(')', 0));
 
-        values.push_back(5);
-        values.push_back(7);
+        firstRow = convertLabelValue("3");
+        lastRow = convertLabelValue("1");
+        firstColumn = convertLabelValue("A");
+        lastColumn = convertLabelValue("C");
+
+        if(firstRow > lastRow)
+            swap(firstRow,lastRow);
+        if(firstColumn > lastColumn)
+            swap(firstColumn,lastColumn);
+
+        row = firstRow;
+        column = firstColumn;
+
+        while(row <= lastRow){
+            cout << "Row: " << row << lastRow << endl;
+            column = firstColumn;
+            while(column <= lastColumn){
+                values.push_back(model->getValue(row,column));
+                cout << "Col: " << column << lastColumn << endl;
+                column++;
+            }
+            row++;
+        }
 
     }else{
         values.push_back(0);

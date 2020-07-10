@@ -1,4 +1,4 @@
-# Install script for directory: /Users/gabrieledalo/Desktop/Progetto_Laboratorio
+# Install script for directory: /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/gabrieledalo/Desktop/Progetto_Laboratorio/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
