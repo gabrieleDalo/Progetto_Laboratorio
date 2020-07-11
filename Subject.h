@@ -12,6 +12,7 @@ public:
     virtual void addObserver(Observer* o) = 0;
     virtual void removeObserver(Observer* o) = 0;
     virtual void notify(int x,int y,float value) = 0;
+    virtual void notifyString(int x,int y,string value) = 0;
     virtual ~Subject() {}
 };
 

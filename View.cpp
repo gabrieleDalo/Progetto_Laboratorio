@@ -44,8 +44,17 @@ void View::onChangeCell(wxCommandEvent &event){
 }
 
 void View::update(int x,int y,float value) {
-    stringstream s;
-    s << fixed << setprecision(2) << value;
+    if(!controller->isError()) {
+        stringstream s;
+        s << fixed << setprecision(2) << value;
+        grid->SetCellValue(x,y,s.str());
+    }else {
+        grid->SetCellValue(x,y,"Error");
+    }
+}
 
-    grid->SetCellValue(x,y,s.str());
+void View::updateString(int x,int y,string value) {
+        stringstream s;
+        s << fixed << value;
+        grid->SetCellValue(x,y,s.str());
 }

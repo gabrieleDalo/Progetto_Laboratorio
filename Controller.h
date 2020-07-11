@@ -9,7 +9,7 @@
 
 class Controller {
 public:
-    explicit Controller(Model* m) : model(m) {}
+    explicit Controller(Model* m,bool error = false) : model(m),error(error) {}
 
     void checkOperation(int x,int y,string row,string column,string data);
 
@@ -28,8 +28,14 @@ public:
     float calculateMean(vector<float> values);
 
     vector<float> getRange(string data);
+
+    bool isError() const;
+
+    void setError(bool error);
+
 private:
     Model* model;
+    bool error;
 };
 
 
