@@ -22,7 +22,7 @@ public:
 
     void notify(int x,int y,float value) override;
 
-    void notifyString(int x,int y,string value) override;
+    void notify(int x,int y,string value) override;
 
     float getValue(int x,int y) const {
         return values.find(make_pair(x,y))->second;
@@ -35,7 +35,7 @@ public:
 
     void setValue(int x,int y,int row,int column,string value) {
         values[make_pair(row,column)] = 0;
-        notifyString(x,y,value);
+        notify(x,y,value);
     }
 
     int getWidth() const;

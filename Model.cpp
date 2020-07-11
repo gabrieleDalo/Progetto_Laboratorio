@@ -17,9 +17,9 @@ void Model::notify(int x,int y,float value) {
         observer->update(x,y,value);
 }
 
-void Model::notifyString(int x,int y,string value) {
+void Model::notify(int x,int y,string value) {
     for (Observer* observer : observers)
-        observer->updateString(x,y,value);
+        observer->update(x,y,value);
 }
 
 int Model::getWidth() const {

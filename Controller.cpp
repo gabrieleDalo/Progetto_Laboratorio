@@ -34,12 +34,10 @@ void Controller::checkOperation(int x,int y,string row,string column,string data
             //Chiamata operazione a seconda di ciò che c'è dopo =
             data = data.substr(1);
             transform(data.begin(), data.end(), data.begin(), ::toupper);
-
             value = checkFormula(data);
         } else {
             value = checkString(data);
         }
-
         model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), value);
     }
     cout << "X: " << x << " Y: " << y << " Row:" << row << " Column:" << column << " Value:" << model->getValue(convertLabelValue(row), convertLabelValue(column)) << endl;
@@ -185,9 +183,64 @@ vector<float> Controller::getRange(string data) {
             }
         }else{
             if (data.find(':') != string::npos) {
+                help = data;
+                if (count(data.begin(), data.end(), ':') == 1) {
+                    help = data.substr(0, data.find(':'));
+                    data.erase(0, data.find_first_of(':'));
+                    data = data.substr(1);
 
+                    if (count(help.begin(), help.end(), ',') == 1 && count(data.begin(), data.end(),',') == 1) {
 
-
+                        copyHelp = help;
+                        try {
+                            stoi(help.substr(0, help.find(',')));
+                            try {
+                                stoi(copyHelp.erase(0, copyHelp.find_first_of(',')+1));
+                                values.push_back(0);
+                                error = true;
+                            } catch (invalid_argument &exception) {
+                                firstRow = convertLabelValue(help.substr(0, help.find(',')));
+                                firstColumn = convertLabelValue(help.erase(0, help.find(',') + 1));
+                            }
+                        } catch (invalid_argument &exception) {
+                            try {
+                                stoi(copyHelp.erase(0, copyHelp.find_first_of(',')+1));
+                                firstColumn = convertLabelValue(help.substr(0, help.find(',')));
+                                firstRow = convertLabelValue(help.erase(0, help.find(',') + 1));
+                            } catch (invalid_argument &exception) {
+                                values.push_back(0);
+                                error = true;
+                            }
+                        }
+                        copyHelp = data;
+                        try {
+                            stoi(data.substr(0, data.find(',')));
+                            try {
+                                stoi(copyHelp.erase(0, copyHelp.find_first_of(',')+1));
+                                values.push_back(0);
+                                error = true;
+                            } catch (invalid_argument &exception) {
+                                lastRow = convertLabelValue(data.substr(0, data.find(',')));
+                                lastColumn = convertLabelValue(data.erase(0, data.find(',') + 1));
+                            }
+                        } catch (invalid_argument &exception) {
+                            try {
+                                stoi(copyHelp.erase(0, copyHelp.find_first_of(',')+1));
+                                lastColumn = convertLabelValue(data.substr(0, data.find(',')));
+                                lastRow = convertLabelValue(data.erase(0, data.find(',') + 1));
+                            } catch (invalid_argument &exception) {
+                                values.push_back(0);
+                                error = true;
+                            }
+                        }
+                    } else {
+                        values.push_back(0);
+                        error = true;
+                    }
+                } else {
+                    values.push_back(0);
+                    error = true;
+                }
             } else if (data.find(',') != string::npos) {
                 help = data;
                 if (count(data.begin(), data.end(), ',') == 1) {

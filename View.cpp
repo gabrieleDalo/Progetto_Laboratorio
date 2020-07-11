@@ -53,7 +53,7 @@ void View::update(int x,int y,float value) {
     }
 }
 
-void View::updateString(int x,int y,string value) {
+void View::update(int x,int y,string value) {
         stringstream s;
         s << fixed << value;
         grid->SetCellValue(x,y,s.str());
