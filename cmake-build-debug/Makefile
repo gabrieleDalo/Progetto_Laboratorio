@@ -56,6 +56,52 @@ CMAKE_BINARY_DIR = /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-bu
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -111,6 +157,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named core
+
+# Build rule for target.
+core: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core
+.PHONY : core
+
+# fast build rule for target.
+core/fast:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/build
+.PHONY : core/fast
+
+#=============================================================================
 # Target rules for targets named Progetto_Laboratorio
 
 # Build rule for target.
@@ -123,12 +182,78 @@ Progetto_Laboratorio/fast:
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/build
 .PHONY : Progetto_Laboratorio/fast
 
+#=============================================================================
+# Target rules for targets named Google_Tests_run
+
+# Build rule for target.
+Google_Tests_run: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Google_Tests_run
+.PHONY : Google_Tests_run
+
+# fast build rule for target.
+Google_Tests_run/fast:
+	$(MAKE) -f Google_Tests/CMakeFiles/Google_Tests_run.dir/build.make Google_Tests/CMakeFiles/Google_Tests_run.dir/build
+.PHONY : Google_Tests_run/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) -f Google_Tests/lib/googlemock/CMakeFiles/gmock.dir/build.make Google_Tests/lib/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) -f Google_Tests/lib/googlemock/CMakeFiles/gmock_main.dir/build.make Google_Tests/lib/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f Google_Tests/lib/googletest/CMakeFiles/gtest_main.dir/build.make Google_Tests/lib/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f Google_Tests/lib/googletest/CMakeFiles/gtest.dir/build.make Google_Tests/lib/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
 Controller.o: Controller.cpp.o
 
 .PHONY : Controller.o
 
 # target to build an object file
 Controller.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Controller.cpp.o
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/Controller.cpp.o
 .PHONY : Controller.cpp.o
 
@@ -138,6 +263,7 @@ Controller.i: Controller.cpp.i
 
 # target to preprocess a source file
 Controller.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Controller.cpp.i
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/Controller.cpp.i
 .PHONY : Controller.cpp.i
 
@@ -147,6 +273,7 @@ Controller.s: Controller.cpp.s
 
 # target to generate assembly for a file
 Controller.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Controller.cpp.s
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/Controller.cpp.s
 .PHONY : Controller.cpp.s
 
@@ -156,6 +283,7 @@ Model.o: Model.cpp.o
 
 # target to build an object file
 Model.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Model.cpp.o
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/Model.cpp.o
 .PHONY : Model.cpp.o
 
@@ -165,6 +293,7 @@ Model.i: Model.cpp.i
 
 # target to preprocess a source file
 Model.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Model.cpp.i
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/Model.cpp.i
 .PHONY : Model.cpp.i
 
@@ -174,6 +303,7 @@ Model.s: Model.cpp.s
 
 # target to generate assembly for a file
 Model.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Model.cpp.s
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/Model.cpp.s
 .PHONY : Model.cpp.s
 
@@ -183,6 +313,7 @@ View.o: View.cpp.o
 
 # target to build an object file
 View.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/View.cpp.o
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/View.cpp.o
 .PHONY : View.cpp.o
 
@@ -192,6 +323,7 @@ View.i: View.cpp.i
 
 # target to preprocess a source file
 View.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/View.cpp.i
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/View.cpp.i
 .PHONY : View.cpp.i
 
@@ -201,6 +333,7 @@ View.s: View.cpp.s
 
 # target to generate assembly for a file
 View.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/View.cpp.s
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/View.cpp.s
 .PHONY : View.cpp.s
 
@@ -210,6 +343,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/main.cpp.o
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/main.cpp.o
 .PHONY : main.cpp.o
 
@@ -219,6 +353,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/main.cpp.i
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/main.cpp.i
 .PHONY : main.cpp.i
 
@@ -228,6 +363,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/main.cpp.s
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/main.cpp.s
 .PHONY : main.cpp.s
 
@@ -237,9 +373,19 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... core"
 	@echo "... edit_cache"
 	@echo "... Progetto_Laboratorio"
+	@echo "... Google_Tests_run"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest_main"
+	@echo "... gtest"
 	@echo "... Controller.o"
 	@echo "... Controller.i"
 	@echo "... Controller.s"
