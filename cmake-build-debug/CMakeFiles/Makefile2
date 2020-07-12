@@ -158,7 +158,7 @@ Google_Tests/lib/googletest/clean: Google_Tests/lib/googletest/CMakeFiles/gtest.
 CMakeFiles/core.dir/all:
 	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/depend
 	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles --progress-num=8,9,10,11,12 "Built target core"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles --progress-num=10,11,12,13,14 "Built target core"
 .PHONY : CMakeFiles/core.dir/all
 
 # Build rule for subdir invocation for target.
@@ -185,7 +185,7 @@ CMakeFiles/core.dir/clean:
 CMakeFiles/Progetto_Laboratorio.dir/all: CMakeFiles/core.dir/all
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/depend
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles --progress-num=3,4,5,6,7 "Built target Progetto_Laboratorio"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles --progress-num=5,6,7,8,9 "Built target Progetto_Laboratorio"
 .PHONY : CMakeFiles/Progetto_Laboratorio.dir/all
 
 # Build rule for subdir invocation for target.
@@ -213,12 +213,12 @@ Google_Tests/CMakeFiles/Google_Tests_run.dir/all: Google_Tests/lib/googletest/CM
 Google_Tests/CMakeFiles/Google_Tests_run.dir/all: Google_Tests/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f Google_Tests/CMakeFiles/Google_Tests_run.dir/build.make Google_Tests/CMakeFiles/Google_Tests_run.dir/depend
 	$(MAKE) -f Google_Tests/CMakeFiles/Google_Tests_run.dir/build.make Google_Tests/CMakeFiles/Google_Tests_run.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Google_Tests_run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target Google_Tests_run"
 .PHONY : Google_Tests/CMakeFiles/Google_Tests_run.dir/all
 
 # Build rule for subdir invocation for target.
 Google_Tests/CMakeFiles/Google_Tests_run.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 Google_Tests/CMakeFiles/Google_Tests_run.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles 0
 .PHONY : Google_Tests/CMakeFiles/Google_Tests_run.dir/rule
@@ -240,7 +240,7 @@ Google_Tests/CMakeFiles/Google_Tests_run.dir/clean:
 Google_Tests/lib/googlemock/CMakeFiles/gmock.dir/all: Google_Tests/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f Google_Tests/lib/googlemock/CMakeFiles/gmock.dir/build.make Google_Tests/lib/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f Google_Tests/lib/googlemock/CMakeFiles/gmock.dir/build.make Google_Tests/lib/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target gmock"
 .PHONY : Google_Tests/lib/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -268,7 +268,7 @@ Google_Tests/lib/googlemock/CMakeFiles/gmock_main.dir/all: Google_Tests/lib/goog
 Google_Tests/lib/googlemock/CMakeFiles/gmock_main.dir/all: Google_Tests/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f Google_Tests/lib/googlemock/CMakeFiles/gmock_main.dir/build.make Google_Tests/lib/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f Google_Tests/lib/googlemock/CMakeFiles/gmock_main.dir/build.make Google_Tests/lib/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles --progress-num=17,18 "Built target gmock_main"
 .PHONY : Google_Tests/lib/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -295,7 +295,7 @@ Google_Tests/lib/googlemock/CMakeFiles/gmock_main.dir/clean:
 Google_Tests/lib/googletest/CMakeFiles/gtest_main.dir/all: Google_Tests/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f Google_Tests/lib/googletest/CMakeFiles/gtest_main.dir/build.make Google_Tests/lib/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f Google_Tests/lib/googletest/CMakeFiles/gtest_main.dir/build.make Google_Tests/lib/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles --progress-num=19,20 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles --progress-num=21,22 "Built target gtest_main"
 .PHONY : Google_Tests/lib/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -322,7 +322,7 @@ Google_Tests/lib/googletest/CMakeFiles/gtest_main.dir/clean:
 Google_Tests/lib/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f Google_Tests/lib/googletest/CMakeFiles/gtest.dir/build.make Google_Tests/lib/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f Google_Tests/lib/googletest/CMakeFiles/gtest.dir/build.make Google_Tests/lib/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles --progress-num=17,18 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles --progress-num=19,20 "Built target gtest"
 .PHONY : Google_Tests/lib/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.

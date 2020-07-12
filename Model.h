@@ -14,7 +14,11 @@ using namespace std;
 
 class Model : public Subject {
 public:
-    Model(int width,int height) : width(width),height(height) {}
+    Model(int width=0,int height=0) : width(width),height(height) {}
+
+    virtual ~Model(){
+        values.clear();
+    }
 
     void addObserver(Observer* o) override;
 

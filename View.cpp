@@ -37,6 +37,9 @@ View::~View() {
 
     // unsubscribe from model
     model->removeObserver(this);
+    delete model;
+    delete controller;
+    delete grid;
 }
 
 void View::onChangeCell(wxCommandEvent &event){

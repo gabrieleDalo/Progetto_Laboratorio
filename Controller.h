@@ -11,6 +11,10 @@ class Controller {
 public:
     explicit Controller(Model* m,bool error = false) : model(m),error(error) {}
 
+    virtual ~Controller(){
+        delete model;
+    }
+
     void checkOperation(int x,int y,string row,string column,string data);
 
     float checkString(string data);

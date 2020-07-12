@@ -170,7 +170,8 @@ vector<float> Controller::getRange(string data) {
                         }
                     }
 
-                    values.push_back(model->getValue(firstRow, firstColumn));
+                    if(!error)
+                        values.push_back(model->getValue(firstRow, firstColumn));
                     data.erase(0, data.find_first_of(';'));
 
                     if (data.find(';') != string::npos)
@@ -322,5 +323,6 @@ bool Controller::isError() const {
 void Controller::setError(bool error) {
     Controller::error = error;
 }
+
 
 

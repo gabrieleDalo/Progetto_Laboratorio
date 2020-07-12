@@ -436,6 +436,12 @@
 			<Option target="core"/>
 			<Option target="Progetto_Laboratorio"/>
 		</Unit>
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Google_Tests/ModelFixture.cpp">
+			<Option target="Google_Tests_run"/>
+		</Unit>
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Google_Tests/ModelTest.cpp">
+			<Option target="Google_Tests_run"/>
+		</Unit>
 		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Google_Tests/lib/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
 		</Unit>

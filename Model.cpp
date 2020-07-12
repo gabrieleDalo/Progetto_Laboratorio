@@ -37,3 +37,4 @@ int Model::getHeight() const {
 void Model::setHeight(int height) {
     Model::height = height;
 }
+
