@@ -157,19 +157,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named core
-
-# Build rule for target.
-core: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 core
-.PHONY : core
-
-# fast build rule for target.
-core/fast:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/build
-.PHONY : core/fast
-
-#=============================================================================
 # Target rules for targets named Progetto_Laboratorio
 
 # Build rule for target.
@@ -253,7 +240,6 @@ Controller.o: Controller.cpp.o
 
 # target to build an object file
 Controller.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Controller.cpp.o
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/Controller.cpp.o
 .PHONY : Controller.cpp.o
 
@@ -263,7 +249,6 @@ Controller.i: Controller.cpp.i
 
 # target to preprocess a source file
 Controller.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Controller.cpp.i
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/Controller.cpp.i
 .PHONY : Controller.cpp.i
 
@@ -273,7 +258,6 @@ Controller.s: Controller.cpp.s
 
 # target to generate assembly for a file
 Controller.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Controller.cpp.s
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/Controller.cpp.s
 .PHONY : Controller.cpp.s
 
@@ -283,7 +267,6 @@ Model.o: Model.cpp.o
 
 # target to build an object file
 Model.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Model.cpp.o
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/Model.cpp.o
 .PHONY : Model.cpp.o
 
@@ -293,7 +276,6 @@ Model.i: Model.cpp.i
 
 # target to preprocess a source file
 Model.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Model.cpp.i
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/Model.cpp.i
 .PHONY : Model.cpp.i
 
@@ -303,7 +285,6 @@ Model.s: Model.cpp.s
 
 # target to generate assembly for a file
 Model.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Model.cpp.s
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/Model.cpp.s
 .PHONY : Model.cpp.s
 
@@ -313,7 +294,6 @@ View.o: View.cpp.o
 
 # target to build an object file
 View.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/View.cpp.o
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/View.cpp.o
 .PHONY : View.cpp.o
 
@@ -323,7 +303,6 @@ View.i: View.cpp.i
 
 # target to preprocess a source file
 View.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/View.cpp.i
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/View.cpp.i
 .PHONY : View.cpp.i
 
@@ -333,7 +312,6 @@ View.s: View.cpp.s
 
 # target to generate assembly for a file
 View.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/View.cpp.s
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/View.cpp.s
 .PHONY : View.cpp.s
 
@@ -343,7 +321,6 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/main.cpp.o
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/main.cpp.o
 .PHONY : main.cpp.o
 
@@ -353,7 +330,6 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/main.cpp.i
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/main.cpp.i
 .PHONY : main.cpp.i
 
@@ -363,7 +339,6 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/main.cpp.s
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/main.cpp.s
 .PHONY : main.cpp.s
 
@@ -378,7 +353,6 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... core"
 	@echo "... edit_cache"
 	@echo "... Progetto_Laboratorio"
 	@echo "... Google_Tests_run"

@@ -1,16 +1,17 @@
-//
-// Created by Gabriele on 06/07/2020.
-//
+/**
+ * @author Gabriele D'Alò
+ * @version 06/07/2020
+ */
 
 #include <string>
 #include <iostream>
-#include <exception>
 #include <cmath>
 #include <vector>
 #include <algorithm>
 #include <numeric>
 #include "Controller.h"
 
+// Funzione che controlla l'operazione da eseguire su una cella
 void Controller::checkOperation(int x,int y,string row,string column,string data) {
     float value;
     error = false;
@@ -29,6 +30,8 @@ void Controller::checkOperation(int x,int y,string row,string column,string data
     }
 
     if(!error || data.at(0) == '=') {
+        // Se è presente un = all'inizio della stringa,
+        // esso specifica che ciò che lo segue deve essere il nome di una formula
         if (data.at(0) == '=') {
             error = false;
             //Chiamata operazione a seconda di ciò che c'è dopo =
@@ -43,9 +46,11 @@ void Controller::checkOperation(int x,int y,string row,string column,string data
     cout << "X: " << x << " Y: " << y << " Row:" << row << " Column:" << column << " Value:" << model->getValue(convertLabelValue(row), convertLabelValue(column)) << endl;
 }
 
+// Funzione che controlla la stringa presente nella cella
 float Controller::checkString(string data){
     float value;
 
+    // Se la stringa supera la dimensione massima viene tagliata
     if(data.size()>7)
         data = data.substr(0,7);
 
@@ -59,11 +64,13 @@ float Controller::checkString(string data){
         error = true;
     }
 
+    // Se la stringa è un numero esso viene approssimato a 2 cifre decimali
     value = round(value*100)/100;
 
     return value;
 }
 
+// Funzione che controlla la formula inserita dall'utente
 float Controller::checkFormula(string data) {
     string somma = "SOMMA(",max="MAX(",min="MIN(",mean="MEAN(";
     float value;
@@ -97,6 +104,7 @@ float Controller::checkFormula(string data) {
     return value;
 }
 
+// Funzione che converte la label di una riga/colonna nel suo rispettivo valore x/y
 int Controller::convertLabelValue(string value){
     int convertedValue = 0;
     string newValue;
@@ -113,7 +121,6 @@ int Controller::convertLabelValue(string value){
         }
 
     }
-
     return convertedValue;
 }
 
@@ -133,6 +140,7 @@ float Controller::calculateMean(const vector<float> values) {
     return (std::accumulate(values.begin(),values.end(),0.0))/values.size();
 }
 
+// Funzione che restituisce un vettore contenente tutti i valori su cui devono essere eseguite le formule
 vector<float> Controller::getRange(string data) {
     vector<float> values;
     string help,copyHelp;
@@ -141,6 +149,8 @@ vector<float> Controller::getRange(string data) {
     int row,column;
     int counter;
 
+    // Vengono eseguiti i vari controlli sulla correttezza sintattica della stringa
+    // inserita dall'utente, e vengono salvati i valori di conseguenza
     if(data.find(')') != string::npos && data.at(0) != ')') {
         data = data.substr(0, data.find(')', 0));
         if(data.find(';') != string::npos){
@@ -289,7 +299,6 @@ vector<float> Controller::getRange(string data) {
             }
 
             if (!error) {
-
                 if (firstRow > lastRow)
                     swap(firstRow, lastRow);
                 if (firstColumn > lastColumn)

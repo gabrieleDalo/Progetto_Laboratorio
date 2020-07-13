@@ -1,6 +1,7 @@
-//
-// Created by Gabriele on 06/07/2020.
-//
+/**
+ * @author Gabriele D'Alò
+ * @version 06/07/2020
+ */
 
 #ifndef PROGETTO_LABORATORIO_MODEL_H
 #define PROGETTO_LABORATORIO_MODEL_H
@@ -12,7 +13,7 @@
 
 using namespace std;
 
-class Model : public Subject {
+class Model : public Subject {   // Concrete Subject
 public:
     Model(int width=0,int height=0) : width(width),height(height) {}
 

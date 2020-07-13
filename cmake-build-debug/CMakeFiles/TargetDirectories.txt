@@ -3,7 +3,6 @@
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles/install.dir
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles/list_install_components.dir
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles/core.dir
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles/Progetto_Laboratorio.dir
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Google_Tests/CMakeFiles/install/local.dir

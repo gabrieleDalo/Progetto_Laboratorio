@@ -124,7 +124,6 @@ Progetto_Laboratorio: CMakeFiles/Progetto_Laboratorio.dir/Controller.cpp.o
 Progetto_Laboratorio: CMakeFiles/Progetto_Laboratorio.dir/Model.cpp.o
 Progetto_Laboratorio: CMakeFiles/Progetto_Laboratorio.dir/View.cpp.o
 Progetto_Laboratorio: CMakeFiles/Progetto_Laboratorio.dir/build.make
-Progetto_Laboratorio: libcore.a
 Progetto_Laboratorio: CMakeFiles/Progetto_Laboratorio.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Progetto_Laboratorio"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Progetto_Laboratorio.dir/link.txt --verbose=$(VERBOSE)

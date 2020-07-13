@@ -8,9 +8,8 @@ set(SOURCE_FILES main.cpp Subject.h Observer.h Controller.cpp Controller.h Model
 find_package(wxWidgets REQUIRED net gl core base xrc adv)
 include(${wxWidgets_USE_FILE})
 
-add_library(core ${SOURCE_FILES})
 add_executable(Progetto_Laboratorio ${SOURCE_FILES})
 
 # for each of your dependent executable/library targets:
 target_link_libraries(${PROJECT_NAME} ${wxWidgets_LIBRARIES})
-target_link_libraries(Progetto_Laboratorio core)
+

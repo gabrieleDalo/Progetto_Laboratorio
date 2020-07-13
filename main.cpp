@@ -1,3 +1,7 @@
+/**
+ * @author Gabriele D'Alò
+ * @version 06/07/2020
+ */
 #include <iostream>
 
 // For compilers that support precompilation, includes "wx/wx.h".
@@ -21,8 +25,8 @@ wxIMPLEMENT_APP(MyApp);
 bool MyApp::OnInit() {
     int numRows = 100;
     int numCols = 52;
-    Model* model = new Model(numRows,numCols);
-    Controller* controller = new Controller(model);
+    auto model = new Model(numRows,numCols);
+    auto controller = new Controller(model);
     View *frame = new View(model, controller, NULL, wxID_ANY, "Foglio di calcolo" );
     frame->Show( true );
 

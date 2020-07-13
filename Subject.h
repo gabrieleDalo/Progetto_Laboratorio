@@ -1,6 +1,7 @@
-//
-// Created by Gabriele on 06/07/2020.
-//
+/**
+ * @author Gabriele D'Alò
+ * @version 06/07/2020
+ */
 
 #ifndef PROGETTO_LABORATORIO_SUBJECT_H
 #define PROGETTO_LABORATORIO_SUBJECT_H

@@ -1,6 +1,7 @@
-//
-// Created by Gabriele on 06/07/2020.
-//
+/**
+ * @author Gabriele D'Alò
+ * @version 06/07/2020
+ */
 
 #ifndef PROGETTO_LABORATORIO_VIEW_H
 #define PROGETTO_LABORATORIO_VIEW_H
@@ -22,7 +23,7 @@
 #include "Model.h"
 #include "Controller.h"
 
-class View : public wxFrame, public Observer {
+class View : public wxFrame, public Observer {  // Concrete Observer
 
 public:
     View(Model* model, Controller* controller, wxWindow* parent=NULL, wxWindowID id = wxID_ANY, const wxString& title = wxEmptyString, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 700,500 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
