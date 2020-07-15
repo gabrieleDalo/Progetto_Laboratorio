@@ -151,7 +151,7 @@ vector<float> Controller::getRange(string data) {
 
     // Vengono eseguiti i vari controlli sulla correttezza sintattica della stringa
     // inserita dall'utente, e vengono salvati i valori di conseguenza
-    if(data.find(')') != string::npos && data.at(0) != ')') {
+    if(data.find(')') != string::npos && data.at(0) != ')' && !error) {
         data = data.substr(0, data.find(')', 0));
         if(data.find(';') != string::npos){
             counter = count(data.begin(),data.end(),';');
@@ -182,6 +182,7 @@ vector<float> Controller::getRange(string data) {
 
                     if(!error)
                         values.push_back(model->getValue(firstRow, firstColumn));
+
                     data.erase(0, data.find_first_of(';'));
 
                     if (data.find(';') != string::npos)
@@ -207,7 +208,6 @@ vector<float> Controller::getRange(string data) {
                             stoi(help.substr(0, help.find(',')));
                             try {
                                 stoi(copyHelp.erase(0, copyHelp.find_first_of(',')+1));
-                                values.push_back(0);
                                 error = true;
                             } catch (invalid_argument &exception) {
                                 firstRow = convertLabelValue(help.substr(0, help.find(',')));
@@ -219,7 +219,6 @@ vector<float> Controller::getRange(string data) {
                                 firstColumn = convertLabelValue(help.substr(0, help.find(',')));
                                 firstRow = convertLabelValue(help.erase(0, help.find(',') + 1));
                             } catch (invalid_argument &exception) {
-                                values.push_back(0);
                                 error = true;
                             }
                         }
@@ -228,7 +227,6 @@ vector<float> Controller::getRange(string data) {
                             stoi(data.substr(0, data.find(',')));
                             try {
                                 stoi(copyHelp.erase(0, copyHelp.find_first_of(',')+1));
-                                values.push_back(0);
                                 error = true;
                             } catch (invalid_argument &exception) {
                                 lastRow = convertLabelValue(data.substr(0, data.find(',')));
@@ -240,16 +238,13 @@ vector<float> Controller::getRange(string data) {
                                 lastColumn = convertLabelValue(data.substr(0, data.find(',')));
                                 lastRow = convertLabelValue(data.erase(0, data.find(',') + 1));
                             } catch (invalid_argument &exception) {
-                                values.push_back(0);
                                 error = true;
                             }
                         }
                     } else {
-                        values.push_back(0);
                         error = true;
                     }
                 } else {
-                    values.push_back(0);
                     error = true;
                 }
             } else if (data.find(',') != string::npos) {
@@ -259,7 +254,6 @@ vector<float> Controller::getRange(string data) {
                         stoi(data.substr(0, data.find(',')));
                         try {
                             stoi(help.erase(0, help.find_first_of(',')+1));
-                            values.push_back(0);
                             error = true;
                         } catch (invalid_argument &exception) {
                             firstRow = convertLabelValue(data.substr(0, data.find(',')));
@@ -275,12 +269,10 @@ vector<float> Controller::getRange(string data) {
                             firstRow = convertLabelValue(data.erase(0, data.find(',') + 1));
                             lastRow = firstRow;
                         } catch (invalid_argument &exception) {
-                            values.push_back(0);
                             error = true;
                         }
                     }
                 } else {
-                    values.push_back(0);
                     error = true;
                 }
             } else {
@@ -315,6 +307,8 @@ vector<float> Controller::getRange(string data) {
                     }
                     row++;
                 }
+            }else{
+                values.push_back(0);
             }
         }
     }else{
