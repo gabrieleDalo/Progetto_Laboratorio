@@ -333,5 +333,14 @@ void Controller::setError(bool error) {
     Controller::error = error;
 }
 
+Model *Controller::getModel() const {
+    return model;
+}
+
+void Controller::setModel(Model *model) {
+    Controller::model = model;
+}
+
+
 
 

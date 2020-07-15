@@ -12,6 +12,8 @@ class Controller {
 public:
     explicit Controller(Model* m,bool error = false) : model(m),error(error) {}
 
+    Controller(){}
+
     virtual ~Controller(){
         delete model;
     }
@@ -37,6 +39,10 @@ public:
     bool isError() const;
 
     void setError(bool error);
+
+    Model *getModel() const;
+
+    void setModel(Model *model);
 
 private:
     Model* model;
