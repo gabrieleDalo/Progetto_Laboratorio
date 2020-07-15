@@ -7,6 +7,7 @@
 
 class ControllerSuite : public ::testing::Test {
 protected:
+protected:
     virtual void SetUp() {
         model = new Model(100,52);
         model->setValue(0,0,0,1,12);
@@ -15,6 +16,10 @@ protected:
         controller.setModel(model);
         values.push_back(12);
         values.push_back(0);
+    }
+
+    virtual void TearDown() {
+        values.clear();
     }
 
     Model* model{};
@@ -60,6 +65,7 @@ TEST_F(ControllerSuite,TestGetRange){
     ASSERT_EQ(controller.getRange("1,1;2,A"),error);
     ASSERT_EQ(controller.getRange("(1,1;2,A)"),error);
     ASSERT_EQ(controller.getRange("()"),error);
+    error.clear();
 }
 
 TEST_F(ControllerSuite,TestCheckFormula){
