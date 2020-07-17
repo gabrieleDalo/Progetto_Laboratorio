@@ -30,17 +30,29 @@ public:
     void notify(int x,int y,string value) override;
 
     float getValue(int x,int y) const {
-        return values.find(make_pair(x,y))->second;
+        if(x < 0 || x > width || y < 0 || y > height){
+            throw out_of_range("Out of range values");
+        }else{
+            return values.find(make_pair(x,y))->second;
+        }
     }
 
     void setValue(int x,int y,int row,int column,float value) {
-        values[make_pair(row,column)] = value;
-        notify(x,y,value);
+        if(x < 0 || x > width || y < 0 || y > height || row < 0 || row > width || column < 1 || column > width-1){
+            throw out_of_range("Out of range values");
+        }else{
+            values[make_pair(row,column)] = value;
+            notify(x,y,value);
+        }
     }
 
     void setValue(int x,int y,int row,int column,string value) {
-        values[make_pair(row,column)] = 0;
-        notify(x,y,value);
+        if(x < 0 || x > width || y < 0 || y > height || row < 0 || row > width || column < 1 || column > width-1){
+            throw out_of_range("Out of range values");
+        }else{
+            values[make_pair(row,column)] = 0;
+            notify(x,y,value);
+        }
     }
 
     int getWidth() const;

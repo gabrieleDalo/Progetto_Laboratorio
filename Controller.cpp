@@ -11,6 +11,7 @@
 #include <numeric>
 #include "Controller.h"
 
+// TODO Aggiungere gestione valori in caso cambino le celle alle quali delle formule fanno riferimento
 // Funzione che controlla l'operazione da eseguire su una cella
 void Controller::checkOperation(int x,int y,string row,string column,string data) {
     float value;
@@ -19,14 +20,26 @@ void Controller::checkOperation(int x,int y,string row,string column,string data
     try{
         stof(data);
         if(data != "0.00"){
-            model->setValue(x,y,convertLabelValue(row),convertLabelValue(column),0);
+            try {
+                model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), 0);
+            } catch (out_of_range& e) {
+                error = true;
+            }
         }
     }catch (invalid_argument &exception){
-        model->setValue(x,y,convertLabelValue(row),convertLabelValue(column),data);
-        error = true;
+        try {
+            model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), data);
+            error = true;
+        } catch (out_of_range& e) {
+            error = true;
+        }
     }catch(out_of_range &exception){
-        model->setValue(x,y,convertLabelValue(row),convertLabelValue(column),data);
-        error = true;
+        try {
+            model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), data);
+            error = true;
+        } catch (out_of_range& e) {
+            error = true;
+        }
     }
 
     if(!error || data.at(0) == '=') {
@@ -72,6 +85,7 @@ float Controller::checkString(string data){
 
 // Funzione che controlla la formula inserita dall'utente
 float Controller::checkFormula(string data) {
+    // TODO incapsulare le operazione delle formule una classe base e 4 derivate (una per ogni formula)
     string somma = "SOMMA(",max="MAX(",min="MIN(",mean="MEAN(";
     float value;
     vector<float> v;
@@ -180,8 +194,14 @@ vector<float> Controller::getRange(string data) {
                         }
                     }
 
-                    if(!error)
-                        values.push_back(model->getValue(firstRow, firstColumn));
+                    if(!error) {
+                        try{
+                            values.push_back(model->getValue(firstRow, firstColumn));
+                        } catch (out_of_range& e) {
+                            error = true;
+                            values.push_back(0);
+                        }
+                    }
 
                     data.erase(0, data.find_first_of(';'));
 
@@ -299,10 +319,14 @@ vector<float> Controller::getRange(string data) {
                 row = firstRow;
                 column = firstColumn;
 
-                while (row <= lastRow) {
+                while(row <= lastRow){
                     column = firstColumn;
                     while (column <= lastColumn) {
-                        values.push_back(model->getValue(row, column));
+                        try {
+                            values.push_back(model->getValue(row, column));
+                        } catch (out_of_range& e) {
+                            values.push_back(0);
+                        }
                         column++;
                     }
                     row++;
