@@ -1,6 +1,7 @@
-//
-// Created by Gabriele on 18/07/2020.
-//
+/**
+ * @author Gabriele D'Alò
+ * @version 06/07/2020
+ */
 
 #include <vector>
 #include <string>

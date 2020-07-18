@@ -22,11 +22,11 @@ public:
 
     float checkString(string data);
 
-    float checkFormula(string data);
+    float checkFormula(int row,int column,string data);
 
     int convertLabelValue(string value);
 
-    vector<float> getRange(string data);
+    vector<float> getRange(int currentRow,int currentColumn,string data);
 
     bool isError() const;
 

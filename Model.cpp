@@ -14,8 +14,9 @@ void Model::removeObserver(Observer* o) {
 }
 
 void Model::notify(int x,int y,float value) {
-    for (Observer* observer : observers)
-        observer->update(x,y,value);
+    for (Observer* observer : observers) {
+        observer->update(x, y, value);
+    }
 }
 
 void Model::notify(int x,int y,string value) {
@@ -38,4 +39,5 @@ int Model::getHeight() const {
 void Model::setHeight(int height) {
     Model::height = height;
 }
+
 

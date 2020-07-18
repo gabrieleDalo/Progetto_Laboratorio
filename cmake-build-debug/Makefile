@@ -234,6 +234,33 @@ gtest/fast:
 	$(MAKE) -f Google_Tests/lib/googletest/CMakeFiles/gtest.dir/build.make Google_Tests/lib/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+Cell.o: Cell.cpp.o
+
+.PHONY : Cell.o
+
+# target to build an object file
+Cell.cpp.o:
+	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/Cell.cpp.o
+.PHONY : Cell.cpp.o
+
+Cell.i: Cell.cpp.i
+
+.PHONY : Cell.i
+
+# target to preprocess a source file
+Cell.cpp.i:
+	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/Cell.cpp.i
+.PHONY : Cell.cpp.i
+
+Cell.s: Cell.cpp.s
+
+.PHONY : Cell.s
+
+# target to generate assembly for a file
+Cell.cpp.s:
+	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/Cell.cpp.s
+.PHONY : Cell.cpp.s
+
 Controller.o: Controller.cpp.o
 
 .PHONY : Controller.o
@@ -387,6 +414,9 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... Cell.o"
+	@echo "... Cell.i"
+	@echo "... Cell.s"
 	@echo "... Controller.o"
 	@echo "... Controller.i"
 	@echo "... Controller.s"

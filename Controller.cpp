@@ -8,7 +8,6 @@
 #include <cmath>
 #include <vector>
 #include <algorithm>
-#include <numeric>
 #include "Controller.h"
 #include "FormulaFactory.h"
 
@@ -16,27 +15,34 @@
 // Funzione che controlla l'operazione da eseguire su una cella
 void Controller::checkOperation(int x,int y,string row,string column,string data) {
     float value;
+    string formula;
     error = false;
+    list<pair<int,int>> cellsToUpdate;
 
     try{
         stof(data);
         if(data != "0.00"){
             try {
-                model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), 0);
+                if(!model->getFormula(convertLabelValue(row), convertLabelValue(column)).empty()){
+                    cout << model->getFormula(convertLabelValue(row), convertLabelValue(column)) << endl;
+                    model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), 0, model->getFormula(convertLabelValue(row), convertLabelValue(column)),true);
+                }else{
+                    model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), 0, "",false);
+                }
             } catch (out_of_range& e) {
                 error = true;
             }
         }
     }catch (invalid_argument &exception){
         try {
-            model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), data);
+            model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), data,"",false);
             error = true;
         } catch (out_of_range& e) {
             error = true;
         }
     }catch(out_of_range &exception){
         try {
-            model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), data);
+            model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), data,"",false);
             error = true;
         } catch (out_of_range& e) {
             error = true;
@@ -49,15 +55,25 @@ void Controller::checkOperation(int x,int y,string row,string column,string data
         if (data.at(0) == '=') {
             error = false;
             //Chiamata operazione a seconda di ciò che c'è dopo =
+            formula = data;
             data = data.substr(1);
             transform(data.begin(), data.end(), data.begin(), ::toupper);
-            value = checkFormula(data);
+            value = checkFormula(convertLabelValue(row), convertLabelValue(column),data);
         } else {
+            formula = "";
             value = checkString(data);
         }
-        model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), value);
+        model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), value,formula,true);
     }
-    cout << "X: " << x << " Y: " << y << " Row:" << row << " Column:" << column << " Value:" << model->getValue(convertLabelValue(row), convertLabelValue(column)) << endl;
+    cout << "X: " << x << " Y: " << y << " Row:" << row << " Column:" << column << " Value:" << model->getValue(convertLabelValue(row), convertLabelValue(column)) << " Formula:" << model->getFormula(convertLabelValue(row), convertLabelValue(column)) << endl;
+
+    if(model->onChangeCellFormula(convertLabelValue(row), convertLabelValue(column)).first) {
+        cellsToUpdate = model->onChangeCellFormula(convertLabelValue(row), convertLabelValue(column)).second;
+        for(auto itr : cellsToUpdate){
+            model->setValue(itr.first,itr.second-1,itr.first,itr.second,checkFormula(itr.first, itr.second,model->getFormula(itr.first,itr.second).substr(1)),model->getFormula(itr.first,itr.second),false);
+        }
+    }
+
 }
 
 // Funzione che controlla la stringa presente nella cella
@@ -105,7 +121,7 @@ int Controller::convertLabelValue(string value){
 }
 
 // Funzione che controlla la formula inserita dall'utente
-float Controller::checkFormula(string data) {
+float Controller::checkFormula(int currentRow,int currentColumn,string data) {
     float value;
     vector<float> v;
     string operation;
@@ -118,7 +134,7 @@ float Controller::checkFormula(string data) {
 
     if(!error) {
         data = data.substr(operation.size() + 1);
-        v = getRange(data);
+        v = getRange(currentRow,currentColumn,data);
         operation = formula.calculateOperation(operation, v);
 
         if (operation != "Error") {
@@ -143,7 +159,7 @@ float Controller::checkFormula(string data) {
 }
 
 // Funzione che restituisce un vettore contenente tutti i valori su cui devono essere eseguite le formule
-vector<float> Controller::getRange(string data) {
+vector<float> Controller::getRange(int currentRow,int currentColumn,string data) {
     vector<float> values;
     string help,copyHelp;
     int firstRow,lastRow;
@@ -185,6 +201,7 @@ vector<float> Controller::getRange(string data) {
                     if(!error) {
                         try{
                             values.push_back(model->getValue(firstRow, firstColumn));
+                            model->onAddFormula(firstRow,firstColumn,currentRow,currentColumn);
                         } catch (out_of_range& e) {
                             error = true;
                             values.push_back(0);

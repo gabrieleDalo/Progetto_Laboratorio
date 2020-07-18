@@ -372,6 +372,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Cell.cpp">
+			<Option target="Progetto_Laboratorio"/>
+		</Unit>
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Cell.h">
+			<Option target="Progetto_Laboratorio"/>
+		</Unit>
 		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Controller.cpp">
 			<Option target="Progetto_Laboratorio"/>
 		</Unit>

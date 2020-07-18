@@ -3,7 +3,7 @@ project(Progetto_Laboratorio)
 
 set(CMAKE_CXX_STANDARD 11)
 add_subdirectory(Google_Tests)
-set(SOURCE_FILES main.cpp Subject.h Observer.h Controller.cpp Controller.h Model.cpp Model.h View.cpp View.h FormulaFactory.h Somma.h Max.h Min.h Mean.h FormulaFactory.cpp Formula.h)
+set(SOURCE_FILES main.cpp Subject.h Observer.h Controller.cpp Controller.h Model.cpp Model.h View.cpp View.h FormulaFactory.h Somma.h Max.h Min.h Mean.h FormulaFactory.cpp Formula.h Cell.cpp Cell.h)
 
 find_package(wxWidgets REQUIRED net gl core base xrc adv)
 include(${wxWidgets_USE_FILE})

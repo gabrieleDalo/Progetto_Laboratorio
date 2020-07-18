@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Progetto_Laboratorio.dir/Cell.cpp.o"
   "CMakeFiles/Progetto_Laboratorio.dir/Controller.cpp.o"
   "CMakeFiles/Progetto_Laboratorio.dir/FormulaFactory.cpp.o"
   "CMakeFiles/Progetto_Laboratorio.dir/Model.cpp.o"
