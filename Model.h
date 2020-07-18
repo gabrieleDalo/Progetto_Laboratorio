@@ -18,7 +18,8 @@ public:
     Model(int width=0,int height=0) : width(width),height(height) {}
 
     virtual ~Model(){
-        values.clear();
+        if(!values.empty())
+            values.clear();
     }
 
     void addObserver(Observer* o) override;
