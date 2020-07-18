@@ -261,6 +261,33 @@ Controller.cpp.s:
 	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/Controller.cpp.s
 .PHONY : Controller.cpp.s
 
+FormulaFactory.o: FormulaFactory.cpp.o
+
+.PHONY : FormulaFactory.o
+
+# target to build an object file
+FormulaFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/FormulaFactory.cpp.o
+.PHONY : FormulaFactory.cpp.o
+
+FormulaFactory.i: FormulaFactory.cpp.i
+
+.PHONY : FormulaFactory.i
+
+# target to preprocess a source file
+FormulaFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/FormulaFactory.cpp.i
+.PHONY : FormulaFactory.cpp.i
+
+FormulaFactory.s: FormulaFactory.cpp.s
+
+.PHONY : FormulaFactory.s
+
+# target to generate assembly for a file
+FormulaFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/Progetto_Laboratorio.dir/build.make CMakeFiles/Progetto_Laboratorio.dir/FormulaFactory.cpp.s
+.PHONY : FormulaFactory.cpp.s
+
 Model.o: Model.cpp.o
 
 .PHONY : Model.o
@@ -363,6 +390,9 @@ help:
 	@echo "... Controller.o"
 	@echo "... Controller.i"
 	@echo "... Controller.s"
+	@echo "... FormulaFactory.o"
+	@echo "... FormulaFactory.i"
+	@echo "... FormulaFactory.s"
 	@echo "... Model.o"
 	@echo "... Model.i"
 	@echo "... Model.s"

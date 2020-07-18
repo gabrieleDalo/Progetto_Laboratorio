@@ -26,14 +26,6 @@ public:
 
     int convertLabelValue(string value);
 
-    float calculateSum(vector<float> values);
-
-    float calculateMax(vector<float> values);
-
-    float calculateMin(vector<float> values);
-
-    float calculateMean(vector<float> values);
-
     vector<float> getRange(string data);
 
     bool isError() const;

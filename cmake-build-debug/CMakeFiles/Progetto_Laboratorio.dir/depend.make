@@ -3,9 +3,19 @@
 
 CMakeFiles/Progetto_Laboratorio.dir/Controller.cpp.o: ../Controller.cpp
 CMakeFiles/Progetto_Laboratorio.dir/Controller.cpp.o: ../Controller.h
+CMakeFiles/Progetto_Laboratorio.dir/Controller.cpp.o: ../Formula.h
+CMakeFiles/Progetto_Laboratorio.dir/Controller.cpp.o: ../FormulaFactory.h
 CMakeFiles/Progetto_Laboratorio.dir/Controller.cpp.o: ../Model.h
 CMakeFiles/Progetto_Laboratorio.dir/Controller.cpp.o: ../Observer.h
 CMakeFiles/Progetto_Laboratorio.dir/Controller.cpp.o: ../Subject.h
+
+CMakeFiles/Progetto_Laboratorio.dir/FormulaFactory.cpp.o: ../Formula.h
+CMakeFiles/Progetto_Laboratorio.dir/FormulaFactory.cpp.o: ../FormulaFactory.cpp
+CMakeFiles/Progetto_Laboratorio.dir/FormulaFactory.cpp.o: ../FormulaFactory.h
+CMakeFiles/Progetto_Laboratorio.dir/FormulaFactory.cpp.o: ../Max.h
+CMakeFiles/Progetto_Laboratorio.dir/FormulaFactory.cpp.o: ../Mean.h
+CMakeFiles/Progetto_Laboratorio.dir/FormulaFactory.cpp.o: ../Min.h
+CMakeFiles/Progetto_Laboratorio.dir/FormulaFactory.cpp.o: ../Somma.h
 
 CMakeFiles/Progetto_Laboratorio.dir/Model.cpp.o: ../Model.cpp
 CMakeFiles/Progetto_Laboratorio.dir/Model.cpp.o: ../Model.h

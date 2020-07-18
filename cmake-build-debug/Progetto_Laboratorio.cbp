@@ -378,7 +378,19 @@
 		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Controller.h">
 			<Option target="Progetto_Laboratorio"/>
 		</Unit>
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Formula.h">
+			<Option target="Progetto_Laboratorio"/>
+		</Unit>
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/FormulaFactory.cpp">
+			<Option target="Progetto_Laboratorio"/>
+		</Unit>
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/FormulaFactory.h">
+			<Option target="Progetto_Laboratorio"/>
+		</Unit>
 		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Google_Tests/ControllerFixture.cpp">
+			<Option target="Google_Tests_run"/>
+		</Unit>
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Google_Tests/FormulaFixture.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
 		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Google_Tests/ModelTest.cpp">
@@ -399,6 +411,15 @@
 		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Google_Tests/runAllTests.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Max.h">
+			<Option target="Progetto_Laboratorio"/>
+		</Unit>
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Mean.h">
+			<Option target="Progetto_Laboratorio"/>
+		</Unit>
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Min.h">
+			<Option target="Progetto_Laboratorio"/>
+		</Unit>
 		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Model.cpp">
 			<Option target="Progetto_Laboratorio"/>
 		</Unit>
@@ -406,6 +427,9 @@
 			<Option target="Progetto_Laboratorio"/>
 		</Unit>
 		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Observer.h">
+			<Option target="Progetto_Laboratorio"/>
+		</Unit>
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Somma.h">
 			<Option target="Progetto_Laboratorio"/>
 		</Unit>
 		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Subject.h">

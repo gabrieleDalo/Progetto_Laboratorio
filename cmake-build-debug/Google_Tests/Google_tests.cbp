@@ -259,6 +259,9 @@
 		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Google_Tests/ControllerFixture.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
+		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Google_Tests/FormulaFixture.cpp">
+			<Option target="Google_Tests_run"/>
+		</Unit>
 		<Unit filename="/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Google_Tests/ModelTest.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>

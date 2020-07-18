@@ -38,7 +38,7 @@ public:
     }
 
     void setValue(int x,int y,int row,int column,float value) {
-        if(x < 0 || x > width || y < 0 || y > height || row < 0 || row > width || column < 1 || column > width-1){
+        if(x < 0 || x > width || y < 0 || y > height || row < 0 || row > width || column < 0 || column > width-1){
             throw out_of_range("Out of range values");
         }else{
             values[make_pair(row,column)] = value;
@@ -47,7 +47,7 @@ public:
     }
 
     void setValue(int x,int y,int row,int column,string value) {
-        if(x < 0 || x > width || y < 0 || y > height || row < 0 || row > width || column < 1 || column > width-1){
+        if(x < 0 || x > width || y < 0 || y > height || row < 0 || row > width || column < 0 || column > width-1){
             throw out_of_range("Out of range values");
         }else{
             values[make_pair(row,column)] = 0;

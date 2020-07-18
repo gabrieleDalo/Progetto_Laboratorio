@@ -7,7 +7,6 @@
 
 class ControllerSuite : public ::testing::Test {
 protected:
-protected:
     virtual void SetUp() {
         model = new Model(100,52);
         model->setValue(0,0,0,1,12);
@@ -35,22 +34,6 @@ TEST_F(ControllerSuite,TestCheckString){
 TEST_F(ControllerSuite,TestConvertLabelValue){
     ASSERT_EQ(controller.convertLabelValue("1"),0);
     ASSERT_EQ(controller.convertLabelValue("A"),1);
-}
-
-TEST_F(ControllerSuite,TestCalculateSum){
-    ASSERT_EQ(controller.calculateSum(values),12);
-}
-
-TEST_F(ControllerSuite,TestCalculateMax){
-    ASSERT_EQ(controller.calculateMax(values),12);
-}
-
-TEST_F(ControllerSuite,TestCalculateMin){
-    ASSERT_EQ(controller.calculateMin(values),0);
-}
-
-TEST_F(ControllerSuite,TestCalculateMean){
-    ASSERT_EQ(controller.calculateMean(values),6);
 }
 
 TEST_F(ControllerSuite,TestGetRange){

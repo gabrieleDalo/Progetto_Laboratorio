@@ -10,6 +10,7 @@
 #include <algorithm>
 #include <numeric>
 #include "Controller.h"
+#include "FormulaFactory.h"
 
 // TODO Aggiungere gestione valori in caso cambino le celle alle quali delle formule fanno riferimento
 // Funzione che controlla l'operazione da eseguire su una cella
@@ -83,41 +84,6 @@ float Controller::checkString(string data){
     return value;
 }
 
-// Funzione che controlla la formula inserita dall'utente
-float Controller::checkFormula(string data) {
-    // TODO incapsulare le operazione delle formule una classe base e 4 derivate (una per ogni formula)
-    string somma = "SOMMA(",max="MAX(",min="MIN(",mean="MEAN(";
-    float value;
-    vector<float> v;
-
-    if(data.compare(0,somma.length(),somma)==0) {
-        cout << "Somma" << endl;
-        data = data.substr(somma.size());
-        v = getRange(data);
-        value = calculateSum(v);
-    }else if(data.compare(0,max.length(),max)==0) {
-        cout << "Max" << endl;
-        data = data.substr(max.size());
-        v = getRange(data);
-        value = calculateMax(v);
-    }else if(data.compare(0,min.length(),min)==0) {
-        cout << "Min" << endl;
-        data = data.substr(min.size());
-        v = getRange(data);
-        value = calculateMin(v);
-    }else if(data.compare(0,mean.length(),mean)==0) {
-        cout << "Mean" << endl;
-        data = data.substr(mean.size());
-        v = getRange(data);
-        value = calculateMean(v);
-    }else{
-        cout << "Altro" << endl;
-        value = 0;
-        error = true;
-    }
-    return value;
-}
-
 // Funzione che converte la label di una riga/colonna nel suo rispettivo valore x/y
 int Controller::convertLabelValue(string value){
     int convertedValue = 0;
@@ -138,20 +104,42 @@ int Controller::convertLabelValue(string value){
     return convertedValue;
 }
 
-float Controller::calculateSum(const vector<float> values) {
-    return accumulate(values.begin(),values.end(),0.0);
-}
+// Funzione che controlla la formula inserita dall'utente
+float Controller::checkFormula(string data) {
+    float value;
+    vector<float> v;
+    string operation;
+    FormulaFactory formula;
 
-float Controller::calculateMax(const vector<float> values) {
-    return *max_element(values.begin(),values.end());
-}
+    if(data.find('(') != string::npos)
+        operation = data.substr(0, data.find('(', 0));
+    else
+        error = true;
 
-float Controller::calculateMin(const vector<float> values) {
-    return *std::min_element(values.begin(),values.end());
-}
+    if(!error) {
+        data = data.substr(operation.size() + 1);
+        v = getRange(data);
+        operation = formula.calculateOperation(operation, v);
 
-float Controller::calculateMean(const vector<float> values) {
-    return (std::accumulate(values.begin(),values.end(),0.0))/values.size();
+        if (operation != "Error") {
+            try {
+                value = stof(operation);
+            } catch (invalid_argument &exception) {
+                value = 0;
+                error = true;
+            } catch (out_of_range &exception) {
+                value = 0;
+                error = true;
+            }
+        } else {
+            value = 0;
+            error = true;
+        }
+    }else{
+        value = 0;
+    }
+
+    return value;
 }
 
 // Funzione che restituisce un vettore contenente tutti i valori su cui devono essere eseguite le formule

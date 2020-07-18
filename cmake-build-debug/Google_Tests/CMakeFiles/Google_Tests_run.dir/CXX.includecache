@@ -341,10 +341,24 @@ numeric
 -
 Controller.h
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Controller.h
+FormulaFactory.h
+/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/FormulaFactory.h
 
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Controller.h
 Model.h
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Model.h
+
+/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Formula.h
+vector
+-
+
+/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/FormulaFactory.h
+vector
+-
+string
+-
+Formula.h
+/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Formula.h
 
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Google_Tests/ControllerFixture.cpp
 gtest/gtest.h
@@ -353,6 +367,18 @@ gtest/gtest.h
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Controller.h
 ../Controller.cpp
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Controller.cpp
+
+/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Google_Tests/ModelTest.cpp
+gtest/gtest.h
+/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Google_Tests/gtest/gtest.h
+../Model.h
+/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Model.h
+../Model.cpp
+/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Model.cpp
+
+/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Model.cpp
+Model.h
+/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Model.h
 
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Model.h
 iostream

@@ -4,9 +4,19 @@
 CMakeFiles/Progetto_Laboratorio.dir/Controller.cpp.o
  /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Controller.cpp
  /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Controller.h
+ /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Formula.h
+ /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/FormulaFactory.h
  /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Model.h
  /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Observer.h
  /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Subject.h
+CMakeFiles/Progetto_Laboratorio.dir/FormulaFactory.cpp.o
+ /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Formula.h
+ /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/FormulaFactory.cpp
+ /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/FormulaFactory.h
+ /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Max.h
+ /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Mean.h
+ /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Min.h
+ /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Somma.h
 CMakeFiles/Progetto_Laboratorio.dir/Model.cpp.o
  /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Model.cpp
  /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Model.h
