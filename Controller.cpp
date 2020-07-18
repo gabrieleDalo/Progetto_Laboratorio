@@ -23,8 +23,7 @@ void Controller::checkOperation(int x,int y,string row,string column,string data
         stof(data);
         if(data != "0.00"){
             try {
-                if(!model->getFormula(convertLabelValue(row), convertLabelValue(column)).empty()){
-                    cout << model->getFormula(convertLabelValue(row), convertLabelValue(column)) << endl;
+                if(model->getFormula(convertLabelValue(row), convertLabelValue(column)) != ""){
                     model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), 0, model->getFormula(convertLabelValue(row), convertLabelValue(column)),true);
                 }else{
                     model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), 0, "",false);
@@ -63,14 +62,15 @@ void Controller::checkOperation(int x,int y,string row,string column,string data
             formula = "";
             value = checkString(data);
         }
-        model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), value,formula,true);
+        model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), value,formula,false);
     }
     cout << "X: " << x << " Y: " << y << " Row:" << row << " Column:" << column << " Value:" << model->getValue(convertLabelValue(row), convertLabelValue(column)) << " Formula:" << model->getFormula(convertLabelValue(row), convertLabelValue(column)) << endl;
 
     if(model->onChangeCellFormula(convertLabelValue(row), convertLabelValue(column)).first) {
         cellsToUpdate = model->onChangeCellFormula(convertLabelValue(row), convertLabelValue(column)).second;
         for(auto itr : cellsToUpdate){
-            model->setValue(itr.first,itr.second-1,itr.first,itr.second,checkFormula(itr.first, itr.second,model->getFormula(itr.first,itr.second).substr(1)),model->getFormula(itr.first,itr.second),false);
+            value = checkFormula(itr.first, itr.second,model->getFormula(itr.first,itr.second).substr(1));
+            model->setValue(itr.first,itr.second-1,itr.first,itr.second,value,model->getFormula(itr.first,itr.second),false);
         }
     }
 

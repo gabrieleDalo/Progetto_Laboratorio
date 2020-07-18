@@ -25,7 +25,7 @@ void Cell::addObserver(Observer *o) {
 
 void Cell::addSubject(Subject *s){
     if(find(subjects.begin(), subjects.end(), dynamic_cast<Cell*>(s)) == subjects.end())
-        observers.push_back(dynamic_cast<Cell*>(s));
+        subjects.push_back(dynamic_cast<Cell*>(s));
 }
 
 void Cell::removeObserver(Observer *o) {
