@@ -67,4 +67,10 @@ TEST_F(ControllerSuite,TestCheckOperation){
     ASSERT_EQ(model->getValue(0,1),12);
     ASSERT_EQ(model->getValue(1,1),0);
     ASSERT_EQ(model->getValue(2,1),6);
+    controller.checkOperation(0,0,"1","A","6");
+    ASSERT_EQ(model->getValue(2,1),3);
+    controller.checkOperation(2,0,"3","A","12");
+    ASSERT_EQ(model->getValue(2,1),12);
+    controller.checkOperation(0,0,"1","A","2");
+    ASSERT_EQ(model->getValue(2,1),12);
 }
