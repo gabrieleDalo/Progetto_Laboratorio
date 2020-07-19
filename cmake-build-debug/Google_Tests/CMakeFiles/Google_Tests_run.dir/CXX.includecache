@@ -326,6 +326,14 @@ cxxabi.h
 acxx_demangle.h
 -
 
+/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Cell.h
+list
+-
+string
+-
+Subject.h
+/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Subject.h
+
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Controller.cpp
 string
 -
@@ -336,8 +344,6 @@ cmath
 vector
 -
 algorithm
--
-numeric
 -
 Controller.h
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Controller.h
@@ -368,18 +374,6 @@ gtest/gtest.h
 ../Controller.cpp
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Controller.cpp
 
-/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Google_Tests/ModelTest.cpp
-gtest/gtest.h
-/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Google_Tests/gtest/gtest.h
-../Model.h
-/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Model.h
-../Model.cpp
-/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Model.cpp
-
-/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Model.cpp
-Model.h
-/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Model.h
-
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Model.h
 iostream
 -
@@ -389,6 +383,8 @@ list
 -
 Subject.h
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Subject.h
+Cell.h
+/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Cell.h
 
 /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Observer.h
 

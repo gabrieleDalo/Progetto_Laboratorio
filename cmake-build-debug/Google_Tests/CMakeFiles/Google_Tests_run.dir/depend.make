@@ -21,6 +21,7 @@ Google_Tests/CMakeFiles/Google_Tests_run.dir/ControllerFixture.cpp.o: ../Google_
 Google_Tests/CMakeFiles/Google_Tests_run.dir/ControllerFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/internal/gtest-port.h
 Google_Tests/CMakeFiles/Google_Tests_run.dir/ControllerFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/internal/gtest-string.h
 Google_Tests/CMakeFiles/Google_Tests_run.dir/ControllerFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/internal/gtest-type-util.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/ControllerFixture.cpp.o: ../Cell.h
 Google_Tests/CMakeFiles/Google_Tests_run.dir/ControllerFixture.cpp.o: ../Controller.cpp
 Google_Tests/CMakeFiles/Google_Tests_run.dir/ControllerFixture.cpp.o: ../Controller.h
 Google_Tests/CMakeFiles/Google_Tests_run.dir/ControllerFixture.cpp.o: ../Formula.h
@@ -79,6 +80,8 @@ Google_Tests/CMakeFiles/Google_Tests_run.dir/ModelTest.cpp.o: ../Google_Tests/li
 Google_Tests/CMakeFiles/Google_Tests_run.dir/ModelTest.cpp.o: ../Google_Tests/lib/googletest/include/gtest/internal/gtest-port.h
 Google_Tests/CMakeFiles/Google_Tests_run.dir/ModelTest.cpp.o: ../Google_Tests/lib/googletest/include/gtest/internal/gtest-string.h
 Google_Tests/CMakeFiles/Google_Tests_run.dir/ModelTest.cpp.o: ../Google_Tests/lib/googletest/include/gtest/internal/gtest-type-util.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/ModelTest.cpp.o: ../Cell.cpp
+Google_Tests/CMakeFiles/Google_Tests_run.dir/ModelTest.cpp.o: ../Cell.h
 Google_Tests/CMakeFiles/Google_Tests_run.dir/ModelTest.cpp.o: ../Google_Tests/ModelTest.cpp
 Google_Tests/CMakeFiles/Google_Tests_run.dir/ModelTest.cpp.o: ../Model.cpp
 Google_Tests/CMakeFiles/Google_Tests_run.dir/ModelTest.cpp.o: ../Model.h
