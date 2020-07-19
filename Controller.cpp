@@ -11,7 +11,6 @@
 #include "Controller.h"
 #include "FormulaFactory.h"
 
-// TODO Aggiungere gestione valori in caso cambino le celle alle quali delle formule fanno riferimento
 // Funzione che controlla l'operazione da eseguire su una cella
 void Controller::checkOperation(int x,int y,string row,string column,string data) {
     float value;

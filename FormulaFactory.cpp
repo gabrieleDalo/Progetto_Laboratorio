@@ -18,19 +18,14 @@ string FormulaFactory::calculateOperation(string operation,vector<float> values)
     Formula* formula = 0;
 
     if(operation.compare(0,somma.length(),somma)==0) {
-        cout << "Somma" << endl;
         formula = new Somma();
     }else if(operation.compare(0,max.length(),max)==0) {
-        cout << "Max" << endl;
         formula = new Max();
     }else if(operation.compare(0,min.length(),min)==0) {
-        cout << "Min" << endl;
         formula = new Min();
     }else if(operation.compare(0,mean.length(),mean)==0) {
-        cout << "Mean" << endl;
         formula = new Mean();
     }else{
-        cout << "Altro" << endl;
         value = "Error";
     }
     if(value != "Error")
