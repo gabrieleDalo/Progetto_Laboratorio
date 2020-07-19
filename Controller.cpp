@@ -328,7 +328,12 @@ vector<float> Controller::getRange(int currentRow,int currentColumn,string data)
                     column = firstColumn;
                     while (column <= lastColumn) {
                         try {
-                            values.push_back(model->getValue(row, column));
+                            if(row != currentRow || column != currentColumn) {
+                                if(model->findValue(row,column)){
+                                    values.push_back(model->getValue(row, column));
+                                    model->onAddFormula(row, column, currentRow, currentColumn);
+                                }
+                            }
                         } catch (out_of_range& e) {
                             values.push_back(0);
                         }

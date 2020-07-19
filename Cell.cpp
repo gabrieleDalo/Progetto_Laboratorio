@@ -15,7 +15,6 @@ void Cell::update(int x, int y, string value) {
 
 void Cell::updateCell(int x, int y) {
     cout << "OK: " << x << y << endl;
-    this->setValue(10);
 }
 
 void Cell::addObserver(Observer *o) {

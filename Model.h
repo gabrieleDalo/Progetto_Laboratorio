@@ -32,19 +32,35 @@ public:
     void notify(int x,int y,string value) override;
 
     void onAddFormula(int row,int column,int currentRow,int currentColumn){
-        values.find(make_pair(currentRow,currentColumn))->second.addSubject(values.find(make_pair(row,column))->second.getCell());
-        values.find(make_pair(row,column))->second.addObserver(values.find(make_pair(currentRow,currentColumn))->second.getCell());
+        if(values.find(make_pair(currentRow,currentColumn)) != values.end() && values.find(make_pair(row,column)) != values.end()) {
+            values.find(make_pair(currentRow, currentColumn))->second.addSubject(values.find(make_pair(row, column))->second.getCell());
+            values.find(make_pair(row, column))->second.addObserver(values.find(make_pair(currentRow, currentColumn))->second.getCell());
+        }
     }
 
     pair<bool,list<pair<int,int>>> onChangeCellFormula(int row,int column){
         return values.find(make_pair(row,column))->second.notifyCell(row,column);
     }
 
+    bool findValue(int x,int y){
+        if(x < 0 || x > width || y < 0 || y > height){
+            throw out_of_range("Out of range values");
+        }else{
+            if(values.find(make_pair(x,y)) != values.end())
+                return true;
+            else
+                return false;
+        }
+    }
+
     float getValue(int x,int y) const {
         if(x < 0 || x > width || y < 0 || y > height){
             throw out_of_range("Out of range values");
         }else{
-            return values.find(make_pair(x,y))->second.getValue();
+            if(values.find(make_pair(x,y)) != values.end())
+                return values.find(make_pair(x,y))->second.getValue();
+            else
+                return 0;
         }
     }
 
@@ -65,12 +81,9 @@ public:
         }else{
 
             if(modified){
-                cout << "prova" << endl;
                 values.find(make_pair(row,column))->second.removeObservers();
                 values.find(make_pair(row,column))->second.removeSubjects();
             }
-
-            cout << "prova1" << endl;
 
             values[make_pair(row,column)].setRow(row);
             values[make_pair(row,column)].setColumn(column);
@@ -81,8 +94,6 @@ public:
     }
 
     void setValue(int x,int y,int row,int column,string value,string formula,bool modified) {
-        cout << "prova2" << endl;
-
         if(x < 0 || x > width || y < 0 || y > height || row < 0 || row > width || column < 0 || column > width-1){
             throw out_of_range("Out of range values");
         }else{
@@ -90,7 +101,6 @@ public:
                 values.find(make_pair(row,column))->second.removeObservers();
                 values.find(make_pair(row,column))->second.removeSubjects();
             }
-            cout << "prova3" << endl;
 
             values[make_pair(row,column)].setRow(row);
             values[make_pair(row,column)].setColumn(column);
