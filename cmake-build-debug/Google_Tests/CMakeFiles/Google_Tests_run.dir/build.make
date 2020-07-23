@@ -96,9 +96,22 @@ Google_Tests/CMakeFiles/Google_Tests_run.dir/ControllerFixture.cpp.s: cmake_forc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Google_Tests_run.dir/ControllerFixture.cpp.s"
 	cd /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Google_Tests && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Google_Tests/ControllerFixture.cpp -o CMakeFiles/Google_Tests_run.dir/ControllerFixture.cpp.s
 
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: Google_Tests/CMakeFiles/Google_Tests_run.dir/flags.make
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/FactoryFixture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o"
+	cd /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Google_Tests && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o -c /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Google_Tests/FactoryFixture.cpp
+
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.i"
+	cd /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Google_Tests && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Google_Tests/FactoryFixture.cpp > CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.i
+
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.s"
+	cd /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Google_Tests && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Google_Tests/FactoryFixture.cpp -o CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.s
+
 Google_Tests/CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.o: Google_Tests/CMakeFiles/Google_Tests_run.dir/flags.make
 Google_Tests/CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.o: ../Google_Tests/FormulaFixture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Google_Tests/CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Google_Tests/CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.o"
 	cd /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Google_Tests && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.o -c /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/Google_Tests/FormulaFixture.cpp
 
 Google_Tests/CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.i: cmake_force
@@ -114,6 +127,7 @@ Google_Tests_run_OBJECTS = \
 "CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.o" \
 "CMakeFiles/Google_Tests_run.dir/ModelTest.cpp.o" \
 "CMakeFiles/Google_Tests_run.dir/ControllerFixture.cpp.o" \
+"CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o" \
 "CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.o"
 
 # External object files for target Google_Tests_run
@@ -122,13 +136,14 @@ Google_Tests_run_EXTERNAL_OBJECTS =
 Google_Tests/Google_Tests_run: Google_Tests/CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.o
 Google_Tests/Google_Tests_run: Google_Tests/CMakeFiles/Google_Tests_run.dir/ModelTest.cpp.o
 Google_Tests/Google_Tests_run: Google_Tests/CMakeFiles/Google_Tests_run.dir/ControllerFixture.cpp.o
+Google_Tests/Google_Tests_run: Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o
 Google_Tests/Google_Tests_run: Google_Tests/CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.o
 Google_Tests/Google_Tests_run: Google_Tests/CMakeFiles/Google_Tests_run.dir/build.make
 Google_Tests/Google_Tests_run: lib/libgtestd.a
 Google_Tests/Google_Tests_run: lib/libgtest_maind.a
 Google_Tests/Google_Tests_run: lib/libgtestd.a
 Google_Tests/Google_Tests_run: Google_Tests/CMakeFiles/Google_Tests_run.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Google_Tests_run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Google_Tests_run"
 	cd /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug/Google_Tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Google_Tests_run.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

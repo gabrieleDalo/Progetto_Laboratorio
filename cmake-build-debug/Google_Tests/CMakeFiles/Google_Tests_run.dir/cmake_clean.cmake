@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Google_Tests_run.dir/ControllerFixture.cpp.o"
+  "CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o"
   "CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.o"
   "CMakeFiles/Google_Tests_run.dir/ModelTest.cpp.o"
   "CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.o"

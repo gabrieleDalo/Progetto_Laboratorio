@@ -198,6 +198,33 @@ ControllerFixture.cpp.s:
 	cd /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug && $(MAKE) -f Google_Tests/CMakeFiles/Google_Tests_run.dir/build.make Google_Tests/CMakeFiles/Google_Tests_run.dir/ControllerFixture.cpp.s
 .PHONY : ControllerFixture.cpp.s
 
+FactoryFixture.o: FactoryFixture.cpp.o
+
+.PHONY : FactoryFixture.o
+
+# target to build an object file
+FactoryFixture.cpp.o:
+	cd /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug && $(MAKE) -f Google_Tests/CMakeFiles/Google_Tests_run.dir/build.make Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o
+.PHONY : FactoryFixture.cpp.o
+
+FactoryFixture.i: FactoryFixture.cpp.i
+
+.PHONY : FactoryFixture.i
+
+# target to preprocess a source file
+FactoryFixture.cpp.i:
+	cd /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug && $(MAKE) -f Google_Tests/CMakeFiles/Google_Tests_run.dir/build.make Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.i
+.PHONY : FactoryFixture.cpp.i
+
+FactoryFixture.s: FactoryFixture.cpp.s
+
+.PHONY : FactoryFixture.s
+
+# target to generate assembly for a file
+FactoryFixture.cpp.s:
+	cd /Users/gabrieledalo/Desktop/Progetto_Laboratorio_MAP/cmake-build-debug && $(MAKE) -f Google_Tests/CMakeFiles/Google_Tests_run.dir/build.make Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.s
+.PHONY : FactoryFixture.cpp.s
+
 FormulaFixture.o: FormulaFixture.cpp.o
 
 .PHONY : FormulaFixture.o
@@ -295,6 +322,9 @@ help:
 	@echo "... ControllerFixture.o"
 	@echo "... ControllerFixture.i"
 	@echo "... ControllerFixture.s"
+	@echo "... FactoryFixture.o"
+	@echo "... FactoryFixture.i"
+	@echo "... FactoryFixture.s"
 	@echo "... FormulaFixture.o"
 	@echo "... FormulaFixture.i"
 	@echo "... FormulaFixture.s"

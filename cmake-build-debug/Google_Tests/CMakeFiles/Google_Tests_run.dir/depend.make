@@ -31,6 +31,35 @@ Google_Tests/CMakeFiles/Google_Tests_run.dir/ControllerFixture.cpp.o: ../Model.h
 Google_Tests/CMakeFiles/Google_Tests_run.dir/ControllerFixture.cpp.o: ../Observer.h
 Google_Tests/CMakeFiles/Google_Tests_run.dir/ControllerFixture.cpp.o: ../Subject.h
 
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/gtest-death-test.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/gtest-matchers.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/gtest-message.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/gtest-param-test.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/gtest-printers.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/gtest-test-part.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/gtest-typed-test.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/gtest.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/gtest_pred_impl.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/gtest_prod.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/internal/custom/gtest-port.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/internal/custom/gtest-printers.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/internal/gtest-death-test-internal.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/internal/gtest-filepath.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/internal/gtest-internal.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/internal/gtest-param-util.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/internal/gtest-port-arch.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/internal/gtest-port.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/internal/gtest-string.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/internal/gtest-type-util.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Formula.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../FormulaFactory.cpp
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../FormulaFactory.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Google_Tests/FactoryFixture.cpp
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Max.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Mean.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Min.h
+Google_Tests/CMakeFiles/Google_Tests_run.dir/FactoryFixture.cpp.o: ../Somma.h
+
 Google_Tests/CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/gtest-death-test.h
 Google_Tests/CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/gtest-matchers.h
 Google_Tests/CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/gtest-message.h
@@ -52,8 +81,6 @@ Google_Tests/CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.o: ../Google_Tes
 Google_Tests/CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/internal/gtest-string.h
 Google_Tests/CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.o: ../Google_Tests/lib/googletest/include/gtest/internal/gtest-type-util.h
 Google_Tests/CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.o: ../Formula.h
-Google_Tests/CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.o: ../FormulaFactory.cpp
-Google_Tests/CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.o: ../FormulaFactory.h
 Google_Tests/CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.o: ../Google_Tests/FormulaFixture.cpp
 Google_Tests/CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.o: ../Max.h
 Google_Tests/CMakeFiles/Google_Tests_run.dir/FormulaFixture.cpp.o: ../Mean.h

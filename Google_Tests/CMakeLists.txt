@@ -3,7 +3,7 @@ add_subdirectory(lib)
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
 # adding the Google_Tests_run target
-set(SOURCE_FILES runAllTests.cpp ModelTest.cpp ControllerFixture.cpp FormulaFixture.cpp)
+set(SOURCE_FILES runAllTests.cpp ModelTest.cpp ControllerFixture.cpp FactoryFixture.cpp FormulaFixture.cpp)
 add_executable(Google_Tests_run ${SOURCE_FILES})
 
 # linking Google_Tests_run
