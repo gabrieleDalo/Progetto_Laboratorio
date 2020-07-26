@@ -30,6 +30,7 @@ public:
     virtual ~View();
     void update(int x,int y,float value) override;
     void update(int x,int y,string value) override;
+    void onSelectCell(wxCommandEvent &event);
     void onChangeCell(wxCommandEvent &event);
 
 private:

@@ -22,6 +22,7 @@ View::View(Model* model, Controller* controller, wxWindow* parent, wxWindowID id
     grid->CreateGrid(numRows,numCols);
 
     // Connect Events
+    grid->Connect(wxEVT_GRID_EDITOR_SHOWN,wxCommandEventHandler(View::onSelectCell),NULL,this);
     grid->Connect(wxEVT_GRID_CELL_CHANGED,wxCommandEventHandler(View::onChangeCell),NULL,this);
 
     frameSizer->Add(grid,1,wxEXPAND|wxALL,5);
@@ -34,12 +35,17 @@ View::View(Model* model, Controller* controller, wxWindow* parent, wxWindowID id
 
 View::~View() {
     // Disconnect Events
+    grid->Disconnect(wxEVT_GRID_EDITOR_SHOWN,wxCommandEventHandler(View::onSelectCell),NULL,this);
     grid->Disconnect(wxEVT_GRID_CELL_CHANGED,wxCommandEventHandler(View::onChangeCell),NULL,this);
 
     // unsubscribe from model
     model->removeObserver(this);
     delete model;
     delete grid;
+}
+
+void View::onSelectCell(wxCommandEvent &event){
+    controller->checkCell(grid->GetCursorRow(),grid->GetCursorColumn(),string(grid->GetRowLabelValue(grid->GetCursorRow()).mb_str(wxConvUTF8)),string(grid->GetColLabelValue(grid->GetCursorColumn()).mb_str(wxConvUTF8)),string(grid->GetCellValue(grid->GetCursorRow(),grid->GetCursorColumn()).mb_str(wxConvUTF8)));
 }
 
 void View::onChangeCell(wxCommandEvent &event){

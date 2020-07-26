@@ -11,6 +11,37 @@
 #include "Controller.h"
 #include "FormulaFactory.h"
 
+void Controller::checkCell(int x, int y, string row, string column, string data) {
+    try{
+        stof(data);
+        if(data != "0.00"){
+            try {
+                if(model->getFormula(convertLabelValue(row), convertLabelValue(column)) != ""){
+                    model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), model->getFormula(convertLabelValue(row), convertLabelValue(column)), model->getFormula(convertLabelValue(row), convertLabelValue(column)),true);
+                }else{
+                    model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), 0, "",false);
+                }
+            } catch (out_of_range& e) {
+                error = true;
+            }
+        }
+    }catch (invalid_argument &exception){
+        try {
+            model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), data,"",false);
+            error = true;
+        } catch (out_of_range& e) {
+            error = true;
+        }
+    }catch(out_of_range &exception){
+        try {
+            model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), data,"",false);
+            error = true;
+        } catch (out_of_range& e) {
+            error = true;
+        }
+    }
+}
+
 // Funzione che controlla l'operazione da eseguire su una cella
 void Controller::checkOperation(int x,int y,string row,string column,string data) {
     float value;
