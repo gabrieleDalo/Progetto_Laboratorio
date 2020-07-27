@@ -12,6 +12,8 @@ using namespace std;
 class Formula{
 public:
     virtual float calculate(vector<float> values) = 0;
+
+    virtual ~Formula() = default;
 };
 
 #endif //PROGETTO_LABORATORIO_FORMULA_H

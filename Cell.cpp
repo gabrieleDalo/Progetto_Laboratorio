@@ -13,10 +13,6 @@ void Cell::update(int x, int y, string value) {
     this->setValue(0);
 }
 
-void Cell::updateCell(int x, int y) {
-    cout << "OK: " << x << y << endl;
-}
-
 void Cell::addObserver(Observer *o) {
     if(find(observers.begin(), observers.end(), dynamic_cast<Cell*>(o)) == observers.end())
         observers.push_back(dynamic_cast<Cell*>(o));
@@ -62,7 +58,6 @@ pair<bool,list<pair<int,int>>> Cell::notifyCell(int x,int y) {
 
     for(auto itr : observers) {
         coordinates.emplace_back(itr->getRow(),itr->getColumn());
-        itr->updateCell(itr->getRow(),itr->getColumn());
     }
     return make_pair(changed,coordinates);
 }

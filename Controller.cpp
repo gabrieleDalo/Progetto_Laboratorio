@@ -22,22 +22,20 @@ void Controller::checkCell(int x, int y, string row, string column, string data)
                     model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), 0, "",false);
                 }
             } catch (out_of_range& e) {
-                error = true;
+
             }
         }
     }catch (invalid_argument &exception){
         try {
             model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), data,"",false);
-            error = true;
         } catch (out_of_range& e) {
-            error = true;
+
         }
     }catch(out_of_range &exception){
         try {
             model->setValue(x, y, convertLabelValue(row), convertLabelValue(column), data,"",false);
-            error = true;
         } catch (out_of_range& e) {
-            error = true;
+
         }
     }
 }

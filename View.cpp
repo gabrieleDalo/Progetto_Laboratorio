@@ -7,7 +7,7 @@
 #include <sstream>
 #include <iomanip>
 
-View::View(Model* model, Controller* controller, wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : wxFrame( parent, id, title, pos, size, style ), numRows(model->getWidth()),numCols(model->getHeight()){
+View::View(Model* model, Controller* controller, wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style) : wxFrame( parent, id, title, pos, size, style ), numRows(model->getWidth()),numCols(model->getHeight()){
 
     this->model = model;
     this->model->addObserver(this);

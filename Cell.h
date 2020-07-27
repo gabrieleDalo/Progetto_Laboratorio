@@ -18,8 +18,6 @@ public:
 
     void update(int x, int y, string value) override;
 
-    void updateCell(int x, int y);
-
     void addObserver(Observer *o) override;
 
     void addSubject(Subject *s);
